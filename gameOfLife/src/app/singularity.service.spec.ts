@@ -27,6 +27,6 @@ describe('SingularityService', () => {
       [{state: false}, {state: false}, {state: false}]
     ];
 
-    expect(service.GetCellState(grid, 1, 1)).toBeTruthy();
+    expect(!service.GetCellState(grid, 1, 1)).toBeTruthy();
   }));
 });
