@@ -14,8 +14,8 @@ describe('SingularityService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('should return false for cell with no neightbours', inject([SingularityService], (service: SingularityService) => {    
-    var cell = new Cell(1,1);
+  it('should return false for cell with less than two neighbours', inject([SingularityService], (service: SingularityService) => {
+    const cell = new Cell(1, 1);
     service.SetGrid([cell]);
 
     expect(service.GetCellState(cell)).toBeFalsy();
