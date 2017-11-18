@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
+import {Cell} from "./model/cell";
 
 @Injectable()
 export class SingularityService {
 
-  constructor() { }
+  grid: Cell[][];
 
-  GetCellState(): boolean {
-    console.log('GetCellState');
-    return true;
+  constructor() {
+  }
+
+  GetCellState(grid: Cell[][], X: Number, Y: Number): boolean {
+    return false;
   }
 
 }
